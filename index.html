@@ -8,28 +8,28 @@
     <style>
         @font-face {
             font-family: Teshrin;
-            src: url(./Teshrin\ Regular.otf);
+            src: url(Fonts/Teshrin\ Regular.otf);
         }
 
         @font-face {
             font-family: TeshrinBold;
-            src: url(./Teshrin\ Bold.ttf);
+            src: url(Fonts/Teshrin\ Bold.ttf);
         }
 
         @font-face {
             font-family: TeshrinLight;
-            src: url(./Teshrin\ Light.otf.otf);
+            src: url(Fonts/Teshrin\ Light.otf.otf);
         }
 
         @font-face {
             font-family: TeshrinMeduim;
-            src: url(./Teshrin\ Medium.otf);
+            src: url(Fonts/Teshrin\ Medium.otf);
         }
     </style>
     <title>Health Assistant</title>
 </head>
 <body>
-    <header class="welcome">
+    <header>
         <h2 class="assisth drop-in">Assist Your Health</h2>
         <p class="assistp drop-in-2">We're here to save you</p>
     </header>
@@ -46,15 +46,18 @@
                     <input type="range" min="70" max="250" value="75" id="weight-slider" class="weight-slider" oninput="changeWnputValue(this.value)">
                     <input type="number" class="weight-text" id="weight-text" value="75" placeholder="0">
                 </div>
+                <div class="bmi-but">
+                    <button class="cal-bmi" id="cal-bmi">Calculate My Bmi</button>
+                </div>
             </form>
         </div>
         <div class="results">
             <div class="bmi drop-in-3">
-                <div class="bmi-res">Your BMI is: <br><span class="bmi-num" id="bmi-num">40</span></div>
+                <div class="bmi-res" id="bmi-res">Your BMI is: <br><span class="bmi-num" id="bmi-num">40</span></div>
             </div>
         </div>
     </main>
-    <footer><div class="footer">Developed By 💙<a href="https://github.com/Abol1644" class="footer-link">Abol1644</a></div></footer>
+    <footer><div class="footer left-right-1">Developed By 💙<a href="https://github.com/Abol1644" class="footer-link">Abol1644</a></div></footer>
 <script src="main.js"></script>
 </body>
 </html>

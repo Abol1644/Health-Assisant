@@ -23,3 +23,10 @@ function changeWangeValue(val){
 function changeWnputValue(val){
     document.getElementById("weight-text").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
 }
+
+function HideBmi() {
+
+    document.getElementById('bmi-res').setAttribute('hidden', '')
+}
+
+HideBmi()
