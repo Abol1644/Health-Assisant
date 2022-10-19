@@ -1,0 +1,282 @@
+/* Hello World! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Teshrin;
+}
+
+/* main Saction */
+body {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(to bottom right, #474747, #121212);
+}
+
+/* Top Header */
+.assisth {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.assistp {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* Inputs */
+.inputs {
+    width: 750px;
+    align-self: center;
+    margin: 6% 0 0 calc(50% - 405px);
+    display: grid;
+    align-items: center;
+}
+
+.height-input, .weight-input {
+    display: flex;
+    justify-content: center;
+}
+
+.height-slider, .weight-slider {
+    width: calc(50% - 35px);
+    height: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #03c39a;
+    border-radius: 15px;
+    outline: none;
+    margin-top: 5px;
+}
+
+.weight-input {
+    margin-top: 35px;
+}
+
+.height-slider::-webkit-slider-thumb, .weight-slider::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: #04668d;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+}
+
+.height-text, .weight-text {
+    width: 55px;
+    text-align: center;
+}
+
+.height-text, .weight-text, .wtxt, .htxt {
+    color:#fff;
+}
+
+.wtxt, .htxt {
+    transform: translateX(10px);
+}
+
+.weight-lable, .height-lable {
+    transform: translate(55px, -25px);
+    color: #fff;
+}
+
+/* Results */
+
+.results {
+    display: grid;
+    justify-content: center;
+}
+
+.results .hidden {
+    display: none;
+}
+
+.bmi {
+    display: grid;
+    justify-content: center;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.bmi-res {
+    color: #fff;
+    font-size: 25px;
+    pointer-events: none;
+}
+
+.bmi-num {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.bmi-num .hidden {
+    display: none;
+}
+
+.bmi-num.underweight{
+    color: #7a8598;
+}
+
+.bmi-num.normal{
+    color: #31d139;
+}
+
+.bmi-num.overweight{
+    color: #dddc14;
+}
+
+.bmi-num.obese{
+    color: #fe9403;
+}
+
+.bmi-num.extremlyobese{
+    color: #ff0000;
+}
+
+.bmi-but {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal-bmi {
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+    margin: 30px 0 0 calc(100% - 75px);
+    display: inline-block;
+    text-decoration: none;
+    color: #121212;
+    padding: 12px 0px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, #0CEBEB, #20E3B2, #29FFC6);
+}
+
+.cal-bmi::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    background: #121212;
+    transition: 0.4s;
+}
+
+.cal-bmi:hover::after {
+    width: 112px;
+}
+
+.bmi-img {
+    width: 450px;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    color: #04668d;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+}
+
+.footer-link {
+    color: #03c39a;
+    text-decoration: 2px underline #03c39a;
+}
+
+/* drop-in Animations */
+.drop-in {
+    animation: drop-in 1s ease-out 200ms backwards;
+   }
+   
+.drop-in-2 {
+    animation: drop-in 1500ms ease 700ms backwards;
+}
+
+.drop-in-3 {
+    animation: drop-in 1800ms ease 1000ms backwards;
+}
+
+.drop-in-4 {
+    animation: drop-in 2200ms ease 1300ms backwards;
+}
+
+.left-right {
+    animation: left-right 1000ms ease 130ms backwards;
+}
+
+.left-right-1 {
+    animation: left-right 2200ms ease 130ms backwards;
+}
+
+.left-right-2 {
+    animation: left-right 700ms ease 130ms backwards;
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes left-right {
+    from {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+/* media query */
+@media (max-width: 768px) {
+    .assisth {
+        font-size: 30px;
+    }
+    .assistp {
+        font-size: 18px;
+    }
+    .inputs {
+        width: 300px;
+        margin: 32% 0 0 calc(50% - 175px);
+    }
+    .height-slider {
+        width: calc(70% - 35px);
+        height: 7px;
+        margin-top: 7px;
+    }
+    .height-slider::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+    }
+    .weight-slider {
+        width: calc(70% - 35px);
+        height: 7px;
+        margin-top: 7px;
+    }
+    .weight-slider::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+    }
+    .bmi {
+        margin-top: 12%;
+    }
+    .bmi-img {
+        width: 300px;
+    }
+}
