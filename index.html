@@ -35,26 +35,28 @@
     </header>
     <main class="main">
         <div class="inputs drop-in-3">
-            <form method="post">
+            <form onsubmit="return false">
                 <div class="height-input">
                     <div class="height-lable">Height</div>
-                    <input type="range" min="1" max="250" value="175" id="height-slider" class="height-slider" oninput="changeInputValue(this.value)">
-                    <input type="number" class="height-text" id="height-text" value="175" placeholder="0">
+                    <input type="range" min="50" max="250" value="175" id="height-slider" class="height-slider" oninput="changeInputValue(this.value)">
+                    <p class="htxt"><span class="height-text" id="height-text">175</span>  Cm</p>
                 </div>
                 <div class="weight-input">
                     <div class="weight-lable">Weight</div>
-                    <input type="range" min="70" max="250" value="75" id="weight-slider" class="weight-slider" oninput="changeWnputValue(this.value)">
-                    <input type="number" class="weight-text" id="weight-text" value="75" placeholder="0">
+                    <input type="range" min="40" max="180" value="75" id="weight-slider" class="weight-slider" oninput="changeWnputValue(this.value)">
+                    <p class="wtxt"><span class="weight-text" id="weight-text">75</span>  Kg</p>
                 </div>
                 <div class="bmi-but">
-                    <button class="cal-bmi" id="cal-bmi">Calculate My Bmi</button>
+                    <button class="cal-bmi" id="cal-bmi" onclick="CalBmi(); Colorize()">Calculate My Bmi</button>
                 </div>
             </form>
         </div>
         <div class="results">
             <div class="bmi drop-in-3">
-                <div class="bmi-res" id="bmi-res">Your BMI is: <br><span class="bmi-num" id="bmi-num">40</span></div>
+                <div class="bmi-res" id="bmi-res">Your BMI is: </div>
+                <p class="bmi-num" id="bmi-num">40</p>
             </div>
+            <img src="./Files/Bmi.png" alt="Bmi_Regular" class="bmi-img drop-in-2" id="bmi-img">
         </div>
     </main>
     <footer><div class="footer left-right-1">Developed By 💙<a href="https://github.com/Abol1644" class="footer-link">Abol1644</a></div></footer>

@@ -69,12 +69,16 @@ body {
 }
 
 .height-text, .weight-text {
-    width: 50px;
+    width: 55px;
     text-align: center;
 }
 
-.height-text::placeholder, .weight-text::placeholder {
-    color:rgb(179, 179, 179);
+.height-text, .weight-text, .wtxt, .htxt {
+    color:#fff;
+}
+
+.wtxt, .htxt {
+    transform: translateX(10px);
 }
 
 .weight-lable, .height-lable {
@@ -83,22 +87,56 @@ body {
 }
 
 /* Results */
+
+.results {
+    display: grid;
+    justify-content: center;
+}
+
+.results .hidden {
+    display: none;
+}
+
 .bmi {
     display: grid;
     justify-content: center;
-    margin-top: 4%;
+    margin-top: 2%;
     text-align: center;
-    color: #fff;
 }
 
 .bmi-res {
+    color: #fff;
     font-size: 25px;
     pointer-events: none;
 }
 
 .bmi-num {
     font-size: 40px;
-    color: #03c39a;
+    margin-top: 0;
+}
+
+.bmi-num .hidden {
+    display: none;
+}
+
+.bmi-num.underweight{
+    color: #7a8598;
+}
+
+.bmi-num.normal{
+    color: #31d139;
+}
+
+.bmi-num.overweight{
+    color: #dddc14;
+}
+
+.bmi-num.obese{
+    color: #fe9403;
+}
+
+.bmi-num.extremlyobese{
+    color: #ff0000;
 }
 
 .bmi-but {
@@ -134,6 +172,11 @@ body {
     width: 112px;
 }
 
+.bmi-img {
+    width: 450px;
+    margin-top: 20px;
+}
+
 /* Footer */
 .footer {
     color: #04668d;
@@ -166,8 +209,16 @@ body {
     animation: drop-in 2200ms ease 1300ms backwards;
 }
 
+.left-right {
+    animation: left-right 1000ms ease 130ms backwards;
+}
+
 .left-right-1 {
     animation: left-right 2200ms ease 130ms backwards;
+}
+
+.left-right-2 {
+    animation: left-right 700ms ease 130ms backwards;
 }
 
 @keyframes drop-in {
